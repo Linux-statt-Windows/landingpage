@@ -1,0 +1,103 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+#background-image {
+	width: 100%;
+	height: 100%;
+	background: url(assets/img/background-top/1.jpg) top left / 100% auto no-repeat; 
+	position: fixed;
+	z-index: -1;
+	top: 0;
+	left: 0;
+}
+@font-face {
+    font-family: Raleway;
+    src: url(/vendor/Raleway/Raleway-Medium.ttf);
+}
+
+h1 {
+	display: block;
+	text-transform: uppercase;
+	margin: 150px 0 40px 0;
+	padding: 40px;
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	font-size: 75px;
+	color: white;
+	height: 100%; 
+}
+
+h2 {
+	display: block;
+	text-transform: uppercase;
+	margin: 30px;
+	padding: 40px;
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	font-size: 40px;
+	color: rgb(68, 68, 68);
+	height: 100%;
+}
+
+h6 {
+	color: rgb(51, 51, 51);
+	font-size: 14px;
+	line-height: 23px;
+	margin-top: 20px;
+	margin-bottom: 50px;
+	font-family: Raleway;
+	text-align: center;
+	padding-bottom: 60px;
+}
+.coloured-text {
+	color: rgb(251, 166, 73);
+}
+
+
+
+
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: red;
+	z-index: 3;
+	
+}
+
+
+.content-area {
+	width: 100%;
+	z-index: 2;
+}
+.content {
+	background-color: white;
+}
+header {
+	height: 300px;
+
+}
+#forum {
+
+}
+#statistic {
+
+}
+#blog {
+
+}
+#camps {
+}
+#aktuelles {
+
+}
+#soziale-netzwerke {
+
+}
+#footer {
+
+}
