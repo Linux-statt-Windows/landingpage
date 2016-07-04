@@ -19,16 +19,23 @@ html, body {
     src: url(/vendor/Raleway/Raleway-Medium.ttf);
 }
 /************************************************	All over the page used elements    ***************************/
+.content-area {
+	width: 100%;
+
+}
+.content {
+	background-color: white;
+}
 h1 {
 	display: block;
 	text-transform: uppercase;
-	margin: 150px 0 40px 0;
-	padding: 40px;
+	margin: 150px 0 0 0;
+	padding: 40px 40px 0 40px;
 	text-align: center;
 	font-family: 'Raleway', sans-serif;
 	font-size: 75px;
 	color: white;
-	height: 100%; 
+ 
 }
 @media only screen and ( min-width: 890px ) and ( max-width: 1030px ){
 	h1 {
@@ -50,15 +57,20 @@ h1 {
 		font-size: 45px;
 	}
 }
-@media only screen and ( min-width: 10px ) and ( max-width: 690px ){
+@media only screen and ( min-width: 450px ) and ( max-width: 690px ){
 	h1 {
-		margin: 80px 0 10px 0;
+		font-size: 45px;
+	}
+}
+@media only screen and ( min-width: 10px ) and ( max-width: 450px ){
+	h1 {
+		font-size: 30px;
 	}
 }
 h2 {
 	display: block;
 	text-transform: uppercase;
-	margin: 30px;
+	margin: 30px 30px 0 30px;
 	padding: 40px;
 	text-align: center;
 	font-family: 'Raleway', sans-serif;
@@ -66,15 +78,26 @@ h2 {
 	color: rgb(68, 68, 68);
 	height: 100%;
 }
+@media only screen and ( min-width: 1px ) and ( max-width: 470px ){
+	h2 {
+		font-size: 30px;
+		padding: 20px 20px 10px 20px;
+	}
+}
 h6 {
 	color: rgb(51, 51, 51);
 	font-size: 14px;
 	line-height: 23px;
-	margin-top: 20px;
-	margin-bottom: 50px;
-	font-family: Raleway;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-family: Raleway, sans-serif;
 	text-align: center;
-	padding-bottom: 60px;
+	padding-bottom: 0px;
+}
+@media only screen and ( min-width: 1px ) and ( max-width: 470px ){
+	h2 {
+		padding-bottom: 20px;
+	}
 }
 .coloured-text {   											/*Orange coloured text, spread all over the page*/
 	color: rgb(251, 166, 73);
@@ -82,9 +105,20 @@ h6 {
 a {
 	text-decoration: none;
 }
+article {
+	font-family: Raleway;
 
+}
+p {
+	font-size: 15px;
+	font-weight: lighter;
+}
 
 /************************************************	Elements, concerning special areas of the page    ************/
+header { 													/*Elements concerning the Header of the page follow this element*/
+	height: 400px;
+
+}
 nav {																/*Navigation, in z-Index 3, always at the top of the page*/
 	position: fixed;
 	top: 0;
@@ -92,8 +126,6 @@ nav {																/*Navigation, in z-Index 3, always at the top of the page*/
 	width: 100%;
 	background-color: rgba(51, 51, 51, 0.8);
 	z-index: 3;
-
-
 }
 #lsw-nav {/*"Linux Statt Windows"-title in navigation*/
 	font-family: Raleway, sans-serif;
@@ -110,16 +142,12 @@ nav ul {
 	display: block;
 	margin: 0 10% 0 0;
 }
-
-	#lsw-nav {
-		margin-left: 5%;
-	}
+#lsw-nav {
+	margin-left: 5%;
 }
-	#lsw-nav {
-		margin-left: 2%;
-	}
+#lsw-nav {
+	margin-left: 2%;
 }
-
 nav ul li {
 	float: left;
 	list-style-type: none;
@@ -129,15 +157,15 @@ nav ul li a {
 	padding: 25px 25px 20px 25px;
 	color: rgb(255, 255, 255);
 	font-family: Raleway, sans-serif;
-	font-size: 15px;
+	font-size: 14.5px;
 	text-transform: uppercase;
-	font-weight: 600;
+	font-weight: 500;
 
 }
 nav ul li a:hover {
 	color: rgb(251,166,73);
 }
-.mobile-view-button {
+.mobile-view-button {								/*Button that enables toggling the menu visibility at small screens, not visible at large screens */
 	display: none;
 	background-color: rgba(0, 0, 0, 0);
 	border: rgb(221, 221, 221) 1px solid;
@@ -150,7 +178,7 @@ nav ul li a:hover {
 	right: 0;
 	top: 0; 
 }
-.line-in-mobile-view-button {		
+.line-in-mobile-view-button {					/*Lines in Button for mobile menu toggeling*/
 	width: 22px;
 	height: 2px;
 	background-color: rgb(255, 255, 255);
@@ -165,8 +193,6 @@ nav ul li a:hover {
 .mobile-view-button:active, .mobile-view-button:hover, .mobile-view-button:target {
 	background-color: rgba(251, 166, 73, 1);
 }
-
-
 @media only screen and ( min-width: 1200px ) and ( max-width: 1350px ){
 	nav ul {
 		margin: 0 5% 0 0;
@@ -210,30 +236,72 @@ nav ul li {
 #nav-open:target a .mobile-view-button-open {		/*Hides the open-the-nav-button, so the close-the-nav-button below can be clicked*/
 	display: none;
 }
-
-
-
-
-
-
-
-
-
-
-.content-area {
-	width: 100%;
-	z-index: 2;
+#buttons-below-title {
+	margin: 0 auto;
+	margin-top: 50px;
+	display: block;
+	text-align: center;
+	height: 50px;
+	}
+.button {
+	padding: 17px 40px 17px 40px;
+	border: 1px rgb(204, 204, 204) solid;
+	border-radius: 5px;
+	color: rgb(255, 255, 255);
+	cursor: pointer;
+	font-size: 14px;
+	font-family: Raleway, sans-serif;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 20px 5px 0 5px;
+	max-width: 30px;
+	line-height: 70px;
 }
-.content {
+.button:hover {
+	background-color: rgba(251, 166, 73, 1);
+}
+.background-orange {
+	background-color: rgb(251, 166, 73);
+	border: 1px rgb(251, 166, 73) solid;
+}
+.background-orange:hover {
+	background-color: transparent;
+}
+
+
+
+
+#forum { 													/*Elements concerning the Header of the page follow this element */
+ background-color: white;
+ height: 2000px;
+ position: relative;
+}
+.intro-article {
+	width: 40%;
 	background-color: white;
+	margin: 1% 2.5% 2% 2.5%;
+	padding: 2.5% 2.5% 2.5% 2.5%;
+	float: left;
+	color: rgb(51, 51, 51)
 }
-header {
-	height: 300px;
+@media only screen and ( min-width: 10px ) and ( max-width: 950px ){
+	.intro-article {
+		width: 80%;
+		margin: 0 auto;
+		float: none;
+	}
+}
+
+#article-area {
+	width: 100%;
+	max-width: 1100px;
+	margin: 0 auto;
+	background-color: white;
+overflow: auto;
 
 }
-#forum {
 
-}
 #statistic {
 
 }
