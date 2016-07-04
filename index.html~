@@ -21,14 +21,17 @@
 				<li><a href="#social-networks">Soziale Netzwerke</a></li>
 				
 			</ul>
-			<a href="#" >					<!-- Button for mobile screens (responsive menu, to close it), this one is just visible if the menu is open but looks exactly like the other one -->
+			<a href="#" >
 			<button class="mobile-view-button mobile-view-button-close">
 				<span class="line-in-mobile-view-button"></span>
 				<span class="line-in-mobile-view-button"></span>
 				<span class="line-in-mobile-view-button"></span>
 			</button>
 			</a>
-			<a href="#nav-open" >		<!-- Button for mobile screens (responsive menu, to open it), this one is just visible if the menu is closed but looks exactly like the other one -->
+			
+			
+			
+			<a href="#nav-open" >
 			<button class="mobile-view-button mobile-view-button-open">
 				<span class="line-in-mobile-view-button"></span>
 				<span class="line-in-mobile-view-button"></span>
