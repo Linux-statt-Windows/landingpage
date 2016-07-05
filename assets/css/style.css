@@ -101,6 +101,10 @@ h6 {
 	text-align: center;
 	padding-bottom: 0px;
 }
+.h6-white {
+	color: rgb(255, 255, 255);;
+	font-weight: lighter;
+}
 @media only screen and ( min-width: 1px ) and ( max-width: 470px ){
 	h2 {
 		padding-bottom: 20px;
@@ -433,46 +437,183 @@ overflow: auto;
 }
 #aktuelles {												/*Elements concerning the news-area (aktuelles) of the page follow this element */
 	background: #101010; /* For browsers that do not support gradients */
-	background: -webkit-linear-gradient(left top, #1F1F1F, #050504); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(bottom right, #1F1F1F, #050504); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(bottom right, #1F1F1F, #050504); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(to bottom right, #1F1F1F, #050504); /* Standard syntax */ 
+	background: -webkit-linear-gradient(left top, #181817, #050504); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(bottom right, #181817, #050504); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(bottom right, #181817, #050504); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to bottom right, #181817, #050504); /* Standard syntax */ 
 	
 
 	padding-top: 1px;
 }
-
-#news-entry-logo {
+#news-area {
+	overflow: auto;
+	color: rgb(255, 255, 255);
+	font-family: Raleway, sans-serif;
+	padding: 70px 30px 30px 300px; 
+}
+.news-entry {
+	display: block;
+	width: 550px;
+	overflow: auto;
+}
+.news-entry-logo {
 	font-size: 60px;
 	display: block;
+	float: left;
+	width: 100px;
 	color: rgb(251, 166, 73);
+	height: 100% !important;
+	min-height: 200px;
+	text-align: center;
+}
+.news-entry-information {
+	float: left;
+	height: 100%;
+	width: 440px;
+}
+.news-entry-title {
+	text-transform: uppercase;
+	line-height: 30px;
+}
+.line-in-news-entry {
+	display: block;
+	background-color: rgb(255, 255, 255);
+	height: 1px;
+	width: 100%;
+	margin: 10px 0 10px 0;
+}
+.news-entry-more{
+	color: rgb(251, 166, 73);
+	font-size: 13px;
+	line-height: 0px;
+	font-weight: lighter;
+}
+@media only screen and ( min-width: 1400px ) and ( max-width: 70000px ){
+	#news-area {
+		padding-left: 30%; 
+	}
+}
+@media only screen and ( min-width: 1000px ) and ( max-width: 1400px ){
+	#news-area {
+		padding-left: 200px; 
+	}
+}
+@media only screen and ( min-width: 770px ) and ( max-width: 1000px ){
+	#news-area {
+		padding-left: 100px; 
+	}
+}
+@media only screen and ( min-width: 500px ) and ( max-width: 770px ){
+	#news-area {
+		padding-left: 50px; 
+	}
+	.news-entry {
+		width: 400px;
+	}
+	#news-entry-logo {
+		width: 90px;
+	}
+	.news-entry-information {
+		width: 300px;
+	}
+}
+@media only screen and ( min-width: 400px ) and ( max-width:500px ){
+	#news-area {
+		padding-left: 30px; 
+	}
+	.news-entry {
+		width: 300px;
+	}
+	#news-entry-logo {
+		width: 90px;
+	}
+	.news-entry-information {
+		width: 200px;
+	}
+}
+@media only screen and ( min-width: 300px ) and ( max-width:400px ){
+	#news-area {
+		padding-left: 20px; 
+	}
+	.news-entry {
+		width: 250px;
+	}
+	#news-entry-logo {
+		width: 90px;
+	}
+	.news-entry-information {
+		width: 150px;
+	}
+}
+@media only screen and ( min-width: 1px ) and ( max-width:300px ){
+	#news-area {
+		padding-left: 20px; 
+	}
+	.news-entry {
+		width: 200px;
+	}
+	#news-entry-logo {
+		width: 90px;
+	}
+	.news-entry-information {
+		width: 100px;
+	}
+}
+
+#social-netzworks { 					 	/*Elements concerning the social-networks-area (aktuelles) of the page follow this element */
+	background-color: rgb(251, 166, 73);
+	overflow: auto;
+	padding: 20px 0 20px 0;
+}
+#social-networks-inner-div {
+	margin: 0 auto;
+	width: 570px;
+	height: 241px;
+}
+.social-network {
+	color: rgb(255, 255, 255);
+	display: block;
+	width: 150px;
+	height: 250px;
+	padding: 0 20px 0 20px;
+	margin-top: 20px;
+	font-family: Raleway, sans-serif;
+	float: left;
+	text-align: center;
+}
+.social-network-icon {
+	color: rgb(255, 255, 255);
+	font-size: 80px;
+	display: block;
+	width: 100%;
+	margin-bottom: 20px;
+}
+.social-network-button {
+	display: block;
+	margin: 7px 0 7px 0;
+	border-radius: 1px;
+	padding: 5px;
+	color: rgb(255, 255, 255);
+	border: rgb(255, 255, 255) 1px solid;
+	min-height: 40px;
+}
+.social-network-button:hover {
+	background-color: rgba(255, 255, 255, 0.15);
+}
+
+.twitterbutton {
+	line-height: 40px;
+}
+@media only screen and ( min-width: 1px ) and ( max-width:650px ){
+	#social-networks-inner-div {
+		width: 195px;
+		height: auto;
+	}
 }
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#soziale-netzwerke {
-
-}
 #footer {
 
 }
