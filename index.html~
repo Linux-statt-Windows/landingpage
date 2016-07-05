@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="de">
+<html>
 	<head>
 			<meta charset="UTF-8" />
 			<title>
@@ -11,6 +11,7 @@
 			<meta property="og:image" content="https:&#x2F;&#x2F;linux-statt-windows.org&#x2F;uploads&#x2F;system&#x2F;og.png" />
 			<meta name="description" content="Lorem Ipsum eine Kurzbeschreibung hier rein!" />
 			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<meta lang="de">
 			<link href="assets/css/style.css" type="text/css" rel="stylesheet" />	
 			<link href="vendor/line-icons/line-icons.min.css" type="text/css" rel="stylesheet" /> 	
 	</head>
