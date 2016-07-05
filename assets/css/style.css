@@ -84,6 +84,13 @@ h2 {
 		padding: 20px 20px 10px 20px;
 	}
 }
+h5 {
+	font-family: "Open Sans", sans-serif;
+	font-size: 23px;
+	text-transform: uppercase;
+	font-weight: lighter;
+	line-height: 0px;
+}
 h6 {
 	color: rgb(51, 51, 51);
 	font-size: 14px;
@@ -104,16 +111,23 @@ h6 {
 }
 a {
 	text-decoration: none;
+	color: rgb(136, 136, 136);
 }
 article {
 	font-family: Raleway;
 
 }
 p {
-	font-size: 15px;
+	font-size: 13px;
+	line-height: 23px;
 	font-weight: lighter;
 }
-
+.line {
+	width: 65%;
+	height: 2px;
+	margin: 0 auto;
+	background-color: rgb(255, 255, 255);
+}
 /************************************************	Elements, concerning special areas of the page    ************/
 header { 													/*Elements concerning the Header of the page follow this element*/
 	height: 400px;
@@ -201,7 +215,7 @@ nav ul li a:hover {
 		margin-left: 5%;
 	}
 }
-@media only screen and ( min-width: 1102px ) and ( max-width: 1199px ){
+@media only screen and ( min-width: 1102px ) and ( max-width: 1200px ){
 	nav ul {
 		margin: 0 0 0 0;
 	}
@@ -209,7 +223,7 @@ nav ul li a:hover {
 		margin-left: 2%;
 	}
 }
-@media only screen and ( min-width: 1px ) and ( max-width: 1101px ){
+@media only screen and ( min-width: 1px ) and ( max-width: 1102px ){
 	nav ul {
 		display: none;
 	}
@@ -292,7 +306,6 @@ nav ul li {
 		float: none;
 	}
 }
-
 #article-area {
 	width: 100%;
 	max-width: 1100px;
@@ -301,18 +314,162 @@ nav ul li {
 overflow: auto;
 
 }
-
-#statistic {
+#statistic {												/*Elements concerning the Header of the page follow this element */
+	background-color: rgb(251, 166, 73);
+	overflow: auto;
+	font-family: Raleway, sans-serif;
+	margin-bottom: -30px;
+}
+.statistic-data {
+	float: left;
+	margin: 10px;
+	padding: 20px 10px 20px 10px;
+	width: 160px;
+	text-align: center;
+	color: rgb(255, 255, 255);
+}
+#statistic-icon {
+	font-size: 60px;
 
 }
-#blog {
+.counter {
+	font-size: 35px;
+	font-weight: bold;
+	line-height: 70px;
+}
+#statistic-area {
+	width: 100%;
+	max-width: 810px;
+	margin: 0 auto;
+}
+@media only screen and ( min-width: 460px ) and ( max-width: 1000px ){
+#statistic-area {
+	max-width: 405px;
+}
+}
+@media only screen and ( min-width: 1px ) and ( max-width: 460px ){
+
+#statistic-area {
+	max-width: 203px;
 
 }
-#camps {
 }
-#aktuelles {
+
+#blog { 													/*Elements concerning the blog-area of the page follow this element */
+	color: rgb(51, 51, 51);
+	font-family: Raleway, sans-serif;
+	overflow: auto;
+	padding-top: 40px;
+}
+#blog-article-area {
+	width: 100%;
+	max-width: 980px;
+	margin: 0 auto;
+	background-color: white;
+	overflow: auto;
+}
+@media only screen and ( min-width: 550px ) and ( max-width: 1000px ){
+#blog-article-area {
+	max-width: 490px;
+}
 
 }
+@media only screen and ( min-width: 1px ) and ( max-width: 550px ){
+#blog-article-area {
+	max-width: 245px;
+}
+
+}
+.blog-data {
+	width: 200px;
+	margin: 10px;
+	padding: 10px;
+	text-align: center;
+	float: left;
+}
+#blog-icon-newspaper, #blog-icon-mic, #blog-icon-genius, #blog-icon-tools {
+	font-size: 70px;
+}
+.blog-article-title {
+	display: block;
+	font-size: 24px;
+	min-height: 70px;
+
+}
+.blog-article {
+	display: block;
+	min-height: 80px;
+
+}
+.mehr-button {
+	display: block;
+	border: 1px solid rgb(251, 166, 73);
+	padding: 9px;
+	width: 70px;
+	border-radius: 20px;
+	margin: 0 auto;
+	color: rgb(136, 136, 136);
+}
+.mehr-button:hover, .mehr-button:active {
+	color: rgb(251, 166, 73);
+}
+#camps { 													/*Elements concerning the camps-area of the page follow this element */
+	margin-top: -30px;
+	padding-top: 70px;
+}
+.camplogo {
+	border: rgba(51, 51, 51, 0.3) 1px solid;
+	border-radius: 4px;
+	padding: 0.2%;
+	width: 20%;
+	margin: 2%;
+	
+}
+@media only screen and ( min-width: 1px ) and ( max-width: 970px ){
+	.camplogo {
+		width: 40%;
+		margin: 4%;	
+	}
+}
+#aktuelles {												/*Elements concerning the news-area (aktuelles) of the page follow this element */
+	background: #101010; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left top, #1F1F1F, #050504); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(bottom right, #1F1F1F, #050504); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(bottom right, #1F1F1F, #050504); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to bottom right, #1F1F1F, #050504); /* Standard syntax */ 
+	
+
+	padding-top: 1px;
+}
+
+#news-entry-logo {
+	font-size: 60px;
+	display: block;
+	color: rgb(251, 166, 73);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #soziale-netzwerke {
 
 }

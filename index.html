@@ -5,9 +5,13 @@
 			<title>
 				Lorem Ipsum Dolor sit amen!
 			</title>
+			<meta property="og:title" content="Home | Linux statt Windows" />
+			<meta property="og:type" content="website" />
+			<meta property="og:image" content="https:&#x2F;&#x2F;linux-statt-windows.org&#x2F;uploads&#x2F;system&#x2F;og.png" />
 			<meta name="description" content="Lorem Ipsum eine Kurzbeschreibung hier rein!" />
 			<meta name="viewport" content="width=device-width, initial-scale=1">
-			<link href="assets/css/style.css" type="text/css" rel="stylesheet" />		
+			<link href="assets/css/style.css" type="text/css" rel="stylesheet" />	
+			<link href="vendor/line-icons/line-icons.min.css" type="text/css" rel="stylesheet" /> 	
 	</head>
 	<body>
 		<nav id="nav-open">
@@ -47,7 +51,7 @@
 					<a href="#forum" class="button background-orange">Blog</a>
 					<a href="#blog" class="button">Forum</a>
 				</div>
-			</header>	
+			</header>
 			<div  class="content-area content">							<!-- AREA: Forum/Info about us -->
 				<h2>
 					Herzlich willkommen in der <span class="coloured-text">Linux statt Windows</span><br /> Community
@@ -62,7 +66,7 @@
 					</article>
 					<article class="intro-article">
 						<h4>Kreative Ideen</h4>
-						<p>Da wir als Linux-Community dem Gedanken von OpenSource und freier Software folgen, sind bei uns alle kreativen Ideen und Projekte herzlich Willkommen. Wenn du ein Projekt oder eine Idee hst, findest du bei uns Mitstreiter.</p>
+						<p>Da wir als Linux-Community dem Gedanken von OpenSource und freier Software folgen, sind bei uns alle kreativen Ideen und Projekte herzlich Willkommen. Wenn du ein Projekt oder eine Idee hast, findest du bei uns Mitstreiter.</p>
 					</article>
 					<article class="intro-article">
 						<h4>Spaß an der Sache</h4>
@@ -73,15 +77,125 @@
 						<p>Als erstes Forum überhaupt bieten wir Camps an. In den Camps kannst du dir Einführungen in bestimmte Themenbereiche von erfahrenen Mitgliedern geben lassen. Um mehr über unsere Camps zu erfahren klicke hier.</p>
 					</article>
 				</div>
-			</div>		
-			
+			</div>
 			<div  class="content-area content" id="statistic">						<!-- AREA: Statistic - Need to get numbers automatically filled in -->
+				<div id="statistic-area">
+					<div class="statistic-data">
+						<i class="icon icon-happy" id="statistic-icon"></i>
+						<h5>Nutzer</h5>
+						<div class="line"></div>
+            	   <span class="counter">67</span>
+        			</div>
+					<div class="statistic-data">
+						<i class="icon icon-flag" id="statistic-icon"></i>
+						<h5>Beiträge</h5>
+						<div class="line"></div>
+               	<span class="counter">7343</span>
+					</div>
+					<div class="statistic-data">
+						<i class="icon icon-browser" id="statistic-icon"></i>
+						<h5>Aufrufe</h5>
+						<div class="line"></div>
+            	   <span class="counter">13010983</span>
+            	                    
+					</div>
+					<div class="statistic-data">
+						<i class="icon icon-newspaper" id="statistic-icon"></i>
+						<h5>Threads</h5>
+						<div class="line"></div>
+            	   <span class="counter">67</span>
+                                
+					</div>
+				</div>
 			</div>
 			<div  class="content-area content" id="blog">								<!-- AREA: Blog -->
+				<h2>
+					Unser <span class="coloured-text">Blog</span><br /> 
+				</h2>	
+				<h6>Bei uns findet Ihr:</h6>
+				<div id="blog-article-area">
+					<div class="blog-data">
+						<i class="icon icon-newspaper" id="blog-icon-newspaper"></i><br /><br />
+						<span class="blog-article-title">Spannende Themen</span>
+						<p class="blog-article">Da wir ein vielfältiges Team haben, gibt es in vielen Themengebieten interessante Artikel.</p>
+            	   <a class="mehr-button">Mehr...</a>
+        			</div>
+					<div class="blog-data">
+						<i class="icon icon-genius" id="blog-icon-genius"></i><br /><br />
+						<span class="blog-article-title">Fachbeiträge</span>
+						<p class="blog-article">Die Artikel werden von erfahrenen Redakteueren geschrieben, die unsere Redaktion aussucht.</p>
+            	   <a class="mehr-button">Mehr...</a>
+        			</div>
+					<div class="blog-data">
+						<i class="icon icon-mic" id="blog-icon-mic"></i><br /><br />
+						<span class="blog-article-title">Podcasts</span>
+						<p class="blog-article">Einmal die Woche gibt es einen Podcast über ein neues spannendes Thema in der Linux-Welt.</p>
+            	   <a class="mehr-button">Mehr...</a>
+        			</div>
+					<div class="blog-data">
+						<i class="icon icon-tools" id="blog-icon-tools"></i><br /><br />
+						<span class="blog-article-title">Die Möglichkeit selber zu schreiben</span>
+						<p class="blog-article">Wenn du Interesse hast selber Artikel zu schreiben, dann melde dich einfach bei uns!</p>
+            	   <a class="mehr-button">Mehr...</a>
+        			</div>
+				</div>
 			</div>
 			<div  class="content-area content" id="camps">							<!-- AREA: Camps -->
+				<h2>
+					Unsere <span class="coloured-text">Camps</span><br /> 
+				</h2>	
+				<h6>Hier ist eine Auflistung unserer Camps. Wenn du mehr erfahren möchtest, klicke einfach auf das jeweilige Camp oder besuche unsere <a href="http://camps.lsw.io/">Camp-Seite</a>.</h6>
+				<div id="camps-area">
+					<img src="assets/img/camps/codecamp.jpg" alt="Logo des Codecamps" class="camplogo">
+					<img src="assets/img/camps/creativecamp.png" alt="Logo des Creativecamps" class="camplogo">
+					<img src="assets/img/camps/securecamp.png" alt="Logo des Securecamps" class="camplogo">
+					<img src="assets/img/camps/techcamp.png" alt="Logo des Techcamps" class="camplogo">
+				</div>
 			</div>
 			<div  class="content-area content" id="aktuelles">						<!-- AREA: Aktuelles --> 
+				<h2>
+					<span class="coloured-text">Aktuelles</span><br /> 
+				</h2>	
+				<h6>Hier erfährst du alles über aktuelle Projekte und Themen der Community.</h6>
+				<div id="news-area">
+					<div class="news-entry">
+						<i class="icon icon-presentation" id="news-entry-logo"></i>
+						<div>
+						
+						</div>
+					</div>
+				
+				</div>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 			</div>
 			<div  class="content-area content" id="soziale-netzwerke">				<!-- AREA: Soziale-Netzwerke-->
 			</div>
