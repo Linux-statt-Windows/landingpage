@@ -16,7 +16,7 @@ html, body {
 }
 @font-face {													/*Schriftart Raleway*/	
     font-family: Raleway;
-    src: url(../../vendor/Raleway/Raleway-Medium.ttf);
+    src: url(../../ddvendor/Raleway/Raleway-Medium.ttf);
 }
 /************************************************	All over the page used elements    ***************************/
 .content-area {
