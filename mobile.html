@@ -1,7 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>LsW</title>
+    <title>LsW Landingpage</title>
 
     <!-- Bootstrap core CSS -->
     <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -19,81 +18,90 @@
 
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <script src="./js/script_mobile.js"></script>
-    
+    <script src="./js/loadPage.js"></script>
+
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
+</head>
 
-  <body onload="load()">
+<body onload="load()">
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="./index.html">Linux statt Windows</a>
+            <a class="navbar-brand" href="./index.html">Linux statt Windows</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
         </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+    </div>
+</nav>
 
-    <div class="container">
-
-      <div class="starter-template">
+<div class="container">
+    <div class="starter-template">
         <!-- content here ! -->
         <div class="row">
-          <!-- blog posts row -->
-        <div class="col-sm-3">
-            <div class="section-title">Webseiten <small style="margin-left: 4px;">⟩</small></div>
-        </div>
-        <div class="col-sm-3">
-          <div class="card">
-                <img src="./assets/image/forum_pic.png" style='height: 100%; width: 100%; object-fit: contain; border-top-left-radius: 8px; border-top-right-radius: 8px;'>
-                <h2><a href="http://forum.linux-statt-windows.org" class="card-title">Forum</a></h2>
-                <div style="height: 1px;"></div>
+            <!-- blog posts row -->
+            <div class="col-sm-3">
+                <div class="section-title">Webseiten
+                    <small style="margin-left: 4px;">⟩</small>
+                </div>
             </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="card">
-                <img src="./assets/image/blog_pic.png" style='height: 100%; width: 100%; object-fit: contain; border-top-left-radius: 8px; border-top-right-radius: 8px;'>
-                <h2><a href="http://blog.linux-statt-windows.org" class="card-title">Blog</a></h2>
-                <div style="height: 1px;"></div>
+            <div class="col-sm-3">
+                <div class="card" onclick="loadPage('forum')">
+                    <img src="./assets/image/forum_pic.png"
+                         style='height: 100%; width: 100%; object-fit: contain; border-top-left-radius: 8px; border-top-right-radius: 8px;'>
+                    <h2><a class="card-title">Forum</a></h2>
+                    <div style="height: 1px;"></div>
+                </div>
             </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="card">
-                <img src="./assets/image/team_pic.png" style='height: 100%; width: 100%; object-fit: contain; border-top-left-radius: 8px; border-top-right-radius: 8px;'>
-                <h2><a href="http://team.linux-statt-windows.org" class="card-title">Team</a></h2>
-                <div style="height: 1px;"></div>
+            <div class="col-sm-3">
+                <div class="card" onclick="loadPage('blog')">
+                    <img src="./assets/image/blog_pic.png"
+                         style='height: 100%; width: 100%; object-fit: contain; border-top-left-radius: 8px; border-top-right-radius: 8px;'>
+                    <h2><a class="card-title">Blog</a></h2>
+                    <div style="height: 1px;"></div>
+                </div>
             </div>
-        </div>
+            <div class="col-sm-3">
+                <div class="card" onclick="loadPage('team')">
+                    <img src="./assets/image/team_pic.png"
+                         style='height: 100%; width: 100%; object-fit: contain; border-top-left-radius: 8px; border-top-right-radius: 8px;'>
+                    <h2><a class="card-title">Team</a></h2>
+                    <div style="height: 1px;"></div>
+                </div>
+            </div>
 
-        <div class="col-sm-3">
-            <div style="height: 5px;"></div>
-            <div class="section-title">Soziale Netzwerke <small style="margin-left: 4px;">⟩</small></div>
-        </div>
-        <div class="col-sm-3">
-          <div class="card" style="background-color: #3b5998;">
-                <h2><a href="https://www.facebook.com/groups/LinuxstattWindows/" class="card-title" style="color: #fff">Facebook</a></h2>
-                <div style="height: 1px;"></div>
+            <div class="col-sm-3">
+                <div style="height: 5px;"></div>
+                <div class="section-title">Soziale Netzwerke
+                    <small style="margin-left: 4px;">⟩</small>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card" style="background-color: #3b5998;" onclick="loadPage('facebook')">
+                    <h2><a class="card-title"
+                           style="color: #fff">Facebook</a></h2>
+                    <div style="height: 1px;"></div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card" style="background-color: #4099FF" onclick="loadPage('twitter')">
+                    <h2><a class="card-title" style="color: #fff">Twitter</a>
+                    </h2>
+                    <div style="height: 1px;"></div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card" style="background-color: #e52d27" onclick="loadPage('youtube')">
+                    <h2><a class="card-title" style="color: #fff">Youtube</a></h2>
+                    <div style="height: 1px;"></div>
+                </div>
             </div>
         </div>
-        <div class="col-sm-3">
-            <div class="card" style="background-color: #4099FF">
-                <h2><a href="https://twitter.com/lsw_io?lang=de" class="card-title" style="color: #fff">Twitter</a></h2>
-                <div style="height: 1px;"></div>
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="card" style="background-color: #e52d27">
-                <h2><a href="https://www.youtube.com/channel/UCfkO3rbaoKNDoB77TZGcQ0Q" class="card-title" style="color: #fff">Youtube</a></h2>
-                <div style="height: 1px;"></div>
-            </div>
-        </div>
-      </div>
 
     </div><!-- /.container -->
 
@@ -104,5 +112,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="./bootstrap/js/bootstrap.min.js"></script>
-  </body>
+</div>
+</body>
 </html>
