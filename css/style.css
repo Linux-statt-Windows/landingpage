@@ -549,6 +549,7 @@ div {
     height: 150px;
     margin: -150px 0 0 -162.5px;
     background-color: #fff;
+    text-align: center;
 }
 
 #application_overlay {
