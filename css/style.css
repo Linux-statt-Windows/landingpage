@@ -4,11 +4,22 @@ html, body {
 
 @font-face {
     font-family: 'open_sanslight';
-    src: url('../assets/opensans_light_macroman/OpenSans-Light-webfont.eot');
-    src: url('../assets/opensans_light_macroman/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
-    url('../assets/opensans_light_macroman/OpenSans-Light-webfont.woff') format('woff'),
-    url('../assets/opensans_light_macroman/OpenSans-Light-webfont.ttf') format('truetype'),
-    url('../assets/opensans_light_macroman/OpenSans-Light-webfont.svg#open_sanslight') format('svg');
+    src: url('../assets/font/opensans_light_macroman/OpenSans-Light-webfont.eot');
+    src: url('../assets/font/opensans_light_macroman/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../assets/font/opensans_light_macroman/OpenSans-Light-webfont.woff') format('woff'),
+    url('../assets/font/opensans_light_macroman/OpenSans-Light-webfont.ttf') format('truetype'),
+    url('../assets/font/opensans_light_macroman/OpenSans-Light-webfont.svg#open_sanslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Ionicons";
+    src: url("https://code.ionicframework.com/ionicons/2.0.1/fonts/ionicons.eot?v=2.0.1");
+    src: url("https://code.ionicframework.com/ionicons/2.0.1/fonts/ionicons.eot?v=2.0.1#iefix") format("embedded-opentype"),
+    url("https://code.ionicframework.com/ionicons/2.0.1/fonts/ionicons.ttf?v=2.0.1") format("truetype"),
+    url("https://code.ionicframework.com/ionicons/2.0.1/fonts/ionicons.woff?v=2.0.1") format("woff"),
+    url("https://code.ionicframework.com/ionicons/2.0.1/fonts/ionicons.svg?v=2.0.1#Ionicons") format("svg");
     font-weight: normal;
     font-style: normal;
 }
@@ -71,7 +82,7 @@ body {
     text-align: center;
     color: #fff;
     content: '\f10a';
-    font-family: 'Ionicons';
+    font-family: 'Ionicons', monospace;
     vertical-align: top;
 }
 
@@ -159,7 +170,7 @@ body {
 .dialogue .vert_menu .dropdown_child {
     display: none;
     background-color: rgba(32, 32, 32, 0.5);
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4) inset;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4) inset;
 }
 
 .dialogue .circles_menu {
@@ -222,7 +233,7 @@ div {
 #topbar .icon:before, .dialogue .icon:before {
     content: 'x';
     font-size: 16px;
-    font-family: 'Ionicons';
+    font-family: 'Ionicons', monospace;
     vertical-align: top;
 }
 
@@ -232,7 +243,7 @@ div {
     margin-right: 9px;
     text-align: center;
     content: 'x';
-    font-family: 'Ionicons';
+    font-family: 'Ionicons', monospace;
     vertical-align: top;
 }
 
@@ -292,7 +303,7 @@ div {
     position: fixed;
     content: '';
     top: 23px;
-    left: 0px;
+    left: 0;
     height: 10px;
     width: 90px;
     border-top: 2px solid #b3b3b3;
@@ -308,11 +319,11 @@ div {
     padding-top: 4px;
     background-size: 50px 50px;
     background: url("http://www.mricons.com/store/png/62750_39960_redhat-fedora_128x128.png") no-repeat -5px 50%;
-    text-shadow: #000 0px 3px 3px;
+    text-shadow: #000 0 3px 3px;
 }
 
 #topbar .currentapp span:after {
-    font-family: 'Ionicons';
+    font-family: 'Ionicons', monospace;
     font-size: 12px;
     padding-left: 5px;
     content: '\f104';
@@ -328,8 +339,8 @@ div {
 }
 
 #topbar .controls ul {
-    margin: 3px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
+    margin: 3px 0 0 0;
+    padding: 0 0 0 0;
 }
 
 #topbar .controls i {
@@ -339,7 +350,7 @@ div {
 #topbar .controls li:last-child:after {
     content: '\f104';
     font-size: 12px;
-    font-family: 'Ionicons';
+    font-family: 'Ionicons', monospace;
     vertical-align: middle;
     margin-left: 6px;
 }
@@ -349,7 +360,7 @@ div {
     position: fixed;
     content: '';
     top: 23px;
-    right: 0px;
+    right: 0;
     height: 10px;
     width: 90px;
     border-top: 2px solid #b3b3b3;
@@ -429,7 +440,6 @@ div {
 }
 
 #timedate_dialogue .leftpane .calendar table th {
-    color: gray;
     font-size: 0;
     width: 30px;
     padding-bottom: 5px;
@@ -756,6 +766,7 @@ div {
     border-radius: 5px;
     background: rgba(54, 54, 54, 0.6);
 }
+
 /*
 .apps tr {
     height: 100px;
