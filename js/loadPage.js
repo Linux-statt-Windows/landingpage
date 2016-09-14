@@ -1,5 +1,5 @@
 function loadPage(site) {
-    switch (site){
+    switch (site) {
         case 'blog':
             window.location = "http://blog.lsw.io";
             break;
