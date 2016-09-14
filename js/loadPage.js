@@ -1,13 +1,13 @@
 function loadPage(site) {
     switch (site) {
         case 'blog':
-            window.location = "https://blog.lsw.io";
+            window.location = "http://blog.lsw.io";
             break;
         case 'forum':
-            window.location = "https://forum.lsw.io";
+            window.location = "http://forum.lsw.io";
             break;
         case 'team':
-            window.location = "https://team.lsw.io";
+            window.location = "http://team.lsw.io";
             break;
         case 'facebook':
             window.location = "https://www.facebook.com/groups/LinuxstattWindows/";
