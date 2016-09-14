@@ -18,6 +18,12 @@ function loadPage(site) {
         case 'youtube':
             window.location = "https://www.youtube.com/channel/UCfkO3rbaoKNDoB77TZGcQ0Q";
             break;
+        case 'tgSmalltalk':
+            window.location = "";
+            break;
+        case 'tgPur':
+            window.location = "";
+            break;
         default:
             break;
     }
