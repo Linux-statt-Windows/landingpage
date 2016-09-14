@@ -749,11 +749,7 @@ div {
     background-color: #cd201f;
 }
 
-#telegramSmalltalk {
-    background-color: #0088cc;
-}
-
-#telegramPur {
+#telegramSmalltalk, #telegramPur, #telegramGaming {
     background-color: #0088cc;
 }
 

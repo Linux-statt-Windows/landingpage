@@ -1,13 +1,13 @@
 function loadPage(site) {
     switch (site) {
         case 'blog':
-            window.location = "http://blog.lsw.io";
+            window.location = "https://blog.lsw.io";
             break;
         case 'forum':
-            window.location = "http://forum.lsw.io";
+            window.location = "https://forum.lsw.io";
             break;
         case 'team':
-            window.location = "http://team.lsw.io";
+            window.location = "https://team.lsw.io";
             break;
         case 'facebook':
             window.location = "https://www.facebook.com/groups/LinuxstattWindows/";
@@ -19,10 +19,13 @@ function loadPage(site) {
             window.location = "https://www.youtube.com/channel/UCfkO3rbaoKNDoB77TZGcQ0Q";
             break;
         case 'tgSmalltalk':
-            window.location = "";
+            window.location = "https://telegram.me/joinchat/ACVCYzvIz_HvV6Fc3tYaNA";
             break;
         case 'tgPur':
-            window.location = "";
+            window.location = "https://telegram.me/joinchat/BSiaST53Rk5WR21vSJuBlw";
+            break;
+        case 'tgGaming':
+            window.location = "https://telegram.me/joinchat/BLqyGz2nLcY9nKjGVCWpRw";
             break;
         default:
             break;
