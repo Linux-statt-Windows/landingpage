@@ -16,6 +16,7 @@ html, body {
 body {
     font-family: 'open_sanslight', Arial, sans-serif;
     letter-spacing: -0.5px;
+    font-weight: bold;
     height: 100%;
     margin: 0;
     background: url(../assets/image/adwaita-day.jpg) repeat;
