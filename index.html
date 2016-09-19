@@ -4,176 +4,155 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>LsW</title>
-
-    <!-- Bootstrap -->
-    <!--<link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <!--<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>-->
-    <!--<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>-->
-    <![endif]-->
-
-    <!-- behind bootstrap include -->
-    <!-- my styles -->
+    <title>LsW - Linux statt Windows</title>
     <link rel="stylesheet" href="assets/font/ionicons.min.css">
     <link rel="stylesheet" href="./css/style.css"/>
 
-    <!-- my scripts -->
+    <script src="./js/jquery-3.1.0.min.js"></script>
     <script src="./js/script.js"></script>
     <script src="./js/loadPage.js"></script>
 </head>
-<body onload="load()">
-<div id="topbar">
-    <div class="applications" onclick="launcher('applications')"><span>Aktivitäten</span></div>
-    <!--<div class="currentapp" onclick="launcher('currentapp')"><span>Application Name</span></div>-->
-    <div class="timedate"><span>Mon 00:00</span></div>
-    <div class="controls">
-        <ul>
-            <li class="wireless"><i class="ion ion-wifi"></i></li>
-            <li class="audio"><i class="ion ion-volume-high"></i></li>
-            <li class="power"><i class="ion ion-power"></i></li>
-        </ul>
-    </div>
-</div>
-<div id="currentapp_dialogue" class="dialogue">
-    <ul class="vert_menu">
-        <li><span>Quit</span></li>
-    </ul>
-</div>
-<div id="timedate_dialogue" class="dialogue">
-    <div class="leftpane">
-        <div class="calendar"><span class="date">Montag Januar 01, 2000</span>
-            <div class="monthpicker"><span class="icon">Vorheriger</span><span class="month">Januar</span><span
-                    class="icon">Nächster</span></div>
-            <table>
-                <tr>
-                    <th>Sonntag</th>
-                    <th>Montag</th>
-                    <th>Dienstag</th>
-                    <th>Mittwoch</th>
-                    <th>Donnerstag</th>
-                    <th>Freitag</th>
-                    <th>Samstag</th>
-                </tr>
-            </table>
-        </div>
-        <hr/>
-        <ul class="vert_menu">
-            <li><span>Uhr öffnen</span></li>
-            <li><span>Datums & Uhr Einstellungen</span></li>
-        </ul>
-    </div>
-    <div class="rightpane">
-        <div class="events">
+<body>
+    <div id="topbar">
+        <div class="applications clickable" onclick="launcher('applications')"><span>Aktivitäten</span></div>
+        <div class="timedate"><span>Mon 00:00</span></div>
+        <div class="controls">
             <ul>
-                <li><span>Heute</span>
-                    <ul>
-                        <li>Alles</li>
-                        <li class="detail">Nichts steht an</li>
-                    </ul>
-                </li>
-                <li><span>Morgen</span>
-                    <ul>
-                        <li>Alles</li>
-                        <li class="detail">Nichts steht an</li>
-                    </ul>
-                </li>
+                <li class="wireless"><i class="ion ion-wifi"></i></li>
+                <li class="audio"><i class="ion ion-volume-high"></i></li>
+                <li class="power"><i class="ion ion-power"></i></li>
             </ul>
         </div>
     </div>
-</div>
-<div id="controls_dialogue" class="dialogue">
-    <ul class="vert_menu">
-        <li class="slider_entry volume"><span class="icon">brightness</span>
-            <input type="range" min="0" max="100" value="65"/>
-        </li>
-        <li class="slider_entry brightness"><span class="icon">volume</span>
-            <input type="range" min="0" max="100" value="100"/>
-        </li>
-    </ul>
-    <hr/>
-    <ul class="vert_menu">
-        <li class="dropdown_parent wireless"><span class="icontext">Wi-Fi</span><span
-                class="detail">Nicht verbunden</span></li>
-        <ul class="dropdown_child">
-            <li><span>Netzwerk wählen</span></li>
-            <li><span>Ausschalten</span></li>
-            <li><span>Wi-Fi Einstellungen</span></li>
+    <div id="currentapp_dialogue" class="dialogue">
+        <ul class="vert_menu">
+            <li><span>Quit</span></li>
         </ul>
-        <li class="dropdown_parent battery"><span class="icontext">power</span><span
-                class="detail">Voll geladen</span></li>
-        <ul class="dropdown_child">
-            <li><span>Energieeinstellungen</span></li>
-        </ul>
-    </ul>
-    <hr/>
-    <ul class="circles_menu">
-        <li class="settings"><span class="icon">Settings</span></li>
-        <li class="lock"><span class="icon">Lock</span></li>
-        <li class="power"><span class="icon">Power</span></li>
-    </ul>
-</div>
-<div id="desktop_panel" class="fullpanel">
-    <div id="pressMe"><i class="ion ion-arrow-up-a"></i> Drück mich! :)</div>
-    <div class="systray"></div>
-    <div id="nojs">
-        <h2>Kein JavaScript?</h2>
-        Bitte aktiviere JavaScript, um diese Seite korrekt darzustellen.
     </div>
-</div>
-<div id="login_overlay" class="overlay">
-</div>
-<div id="application_overlay" class="overlay" hidden>
-    <div id="application_menu">
-        <center>
-            <div class="apps">
-                <div class="app">
-                    <div class="content" id="blog" onclick="loadPage('blog')"></div>
-                    <div class="description">Blog</div>
-                </div>
-                <div class="app">
-                    <div class="content" id="forum" onclick="loadPage('forum')"></div>
-                    <div class="description">Forum</div>
-                </div>
-                <div class="app">
-                    <div class="content" id="socialNetworking">
-                        <a class="button" id="facebook" onclick="loadPage('facebook')">Facebook</a>
-                        <a class="button" id="twitter" onclick="loadPage('twitter')">Twitter</a>
-                        <a class="button" id="youtube" onclick="loadPage('youtube')">Youtube</a>
-                    </div>
-                    <div class="description">Social Media</div>
-                </div>
-                <div class="app">
-                    <div class="content" id="telegram">
-                        <a class="button" id="telegramSmalltalk" onclick="loadPage('tgSmalltalk')">Smalltalk</a>
-                        <a class="button" id="telegramPur" onclick="loadPage('tgPur')">Pur</a>
-                        <a class="button" id="telegramGaming" onclick="loadPage('tgGaming')">Gaming</a>
-                    </div>
-                    <div class="description">Telegram Links</div>
-                </div>
-                <div class="app">
-                    <div class="content" id="teampage" onclick="loadPage('team')"></div>
-                    <div class="description">Übersicht unseres Teams</div>
-                </div>
-                <div class="app">
-                    <div class="content" id="news">
-                        Wir haben ein neues Forum und so einiges anderes Schönes! Schaut mal rein :)
-                    </div>
-                    <div class="description">Aktuelles</div>
-                </div>
+    <div id="timedate_dialogue" class="dialogue">
+        <div class="leftpane">
+            <div class="calendar"><span class="date">Montag Januar 01, 2000</span>
+                <div class="monthpicker"><span class="icon">Vorheriger</span><span class="month">Januar</span><span
+                        class="icon">Nächster</span></div>
+                <table>
+                    <tr>
+                        <th>Sonntag</th>
+                        <th>Montag</th>
+                        <th>Dienstag</th>
+                        <th>Mittwoch</th>
+                        <th>Donnerstag</th>
+                        <th>Freitag</th>
+                        <th>Samstag</th>
+                    </tr>
+                </table>
             </div>
-        </center>
+            <hr/>
+            <ul class="vert_menu">
+                <li><span>Uhr öffnen</span></li>
+                <li><span>Datums & Uhr Einstellungen</span></li>
+            </ul>
+        </div>
+        <div class="rightpane">
+            <div class="events">
+                <ul>
+                    <li><span>Heute</span>
+                        <ul>
+                            <li>Alles</li>
+                            <li class="detail">Nichts steht an</li>
+                        </ul>
+                    </li>
+                    <li><span>Morgen</span>
+                        <ul>
+                            <li>Alles</li>
+                            <li class="detail">Nichts steht an</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
-</div>
-
-
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<!--<script src="./bootstrap/js/bootstrap.min.js"></script>-->
+    <div id="controls_dialogue" class="dialogue">
+        <ul class="vert_menu">
+            <li class="slider_entry volume"><span class="icon">brightness</span>
+                <input type="range" min="0" max="100" value="65"/>
+            </li>
+            <li class="slider_entry brightness"><span class="icon">volume</span>
+                <input type="range" min="0" max="100" value="100"/>
+            </li>
+        </ul>
+        <hr/>
+        <ul class="vert_menu">
+            <li class="dropdown_parent wireless"><span class="icontext">Wi-Fi</span><span
+                    class="detail">Nicht verbunden</span></li>
+            <ul class="dropdown_child">
+                <li><span>Netzwerk wählen</span></li>
+                <li><span>Ausschalten</span></li>
+                <li><span>Wi-Fi Einstellungen</span></li>
+            </ul>
+            <li class="dropdown_parent battery"><span class="icontext">power</span><span
+                    class="detail">Voll geladen</span></li>
+            <ul class="dropdown_child">
+                <li><span>Energieeinstellungen</span></li>
+            </ul>
+        </ul>
+        <hr/>
+        <ul class="circles_menu">
+            <li class="settings"><span class="icon">Settings</span></li>
+            <li class="lock"><span class="icon">Lock</span></li>
+            <li class="power"><span class="icon">Power</span></li>
+        </ul>
+    </div>
+    <div id="desktop_panel" class="fullpanel">
+        <div id="pressMe"><i class="ion ion-arrow-up-a"></i> Drück mich! :)</div>
+        <div class="systray"></div>
+        <noscript id="nojs">
+            <h2>Kein JavaScript?</h2>
+            Bitte aktiviere JavaScript, um diese Seite korrekt darzustellen.
+        </noscript>
+    </div>
+    <div id="login_overlay" class="overlay">
+    </div>
+    <div id="application_overlay" class="overlay" hidden>
+        <div id="application_menu">
+            <center>
+                <div class="apps">
+                    <div class="app">
+                        <div class="content clickable" id="blog" onclick="loadPage('blog')"></div>
+                        <div class="description">Blog</div>
+                    </div>
+                    <div class="app">
+                        <div class="content clickable" id="forum" onclick="loadPage('forum')"></div>
+                        <div class="description">Forum</div>
+                    </div>
+                    <div class="app">
+                        <div class="content" id="socialNetworking">
+                            <a class="button" id="facebook" onclick="loadPage('facebook')">Facebook</a>
+                            <a class="button" id="twitter" onclick="loadPage('twitter')">Twitter</a>
+                            <a class="button" id="youtube" onclick="loadPage('youtube')">Youtube</a>
+                        </div>
+                        <div class="description">Social Media</div>
+                    </div>
+                    <div class="app">
+                        <div class="content" id="telegram">
+                            <a class="button" id="telegramSmalltalk" onclick="loadPage('tgSmalltalk')">Smalltalk</a>
+                            <a class="button" id="telegramPur" onclick="loadPage('tgPur')">Pur</a>
+                            <a class="button" id="telegramGaming" onclick="loadPage('tgGaming')">Gaming</a>
+                        </div>
+                        <div class="description">Telegram Links</div>
+                    </div>
+                    <div class="app">
+                        <div class="content clickable" id="teampage" onclick="loadPage('team')"></div>
+                        <div class="description">Übersicht unseres Teams</div>
+                    </div>
+                    <div class="app">
+                        <div class="content" id="news">
+                            Wir haben ein neues Forum und so einiges anderes Schönes! Schaut mal rein :)
+                        </div>
+                        <div class="description">Aktuelles</div>
+                    </div>
+                </div>
+            </center>
+        </div>
+    </div>
 </body>
 </html>
