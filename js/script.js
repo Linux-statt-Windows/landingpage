@@ -1,13 +1,14 @@
-function load() {
+$(document).ready(function(){
     if (screen.width <= 699) {
         document.location = "mobile.html";
     }
 
-    var e = document.getElementById('nojs');
-    e.parentNode.removeChild(e);
-
     startTime();
-}
+}).keyup(function(e) {
+     if (e.keyCode == 27) {
+        launcher('applications');
+    }
+});
 
 function startTime() {
     var days = ['Son', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];

@@ -23,11 +23,6 @@ body {
     background-size: 1000px;
 }
 
-* {
-    outline: none !important;
-    cursor: default;
-}
-
 .dialogue {
     display: none;
     z-index: +2;
@@ -285,6 +280,7 @@ div {
 }
 
 #topbar .applications {
+    cursor: pointer;
     float: left;
 }
 
@@ -547,8 +543,8 @@ div {
 
 #application_menu {
     display: none;
-    padding-top: 10%;
     width: 100%;
+    height: 100%;
     background: rgba(0, 0, 0, 0.5) repeat;
 }
 
@@ -651,6 +647,7 @@ div {
 }
 
 .apps {
+    padding-top: 10%;
     width: 70%;
 }
 
@@ -738,6 +735,10 @@ div {
     border: solid 1px white;
 }
 
+.clickable {
+    cursor: pointer;
+}
+
 #twitter {
     background-color: #1da1f2;
 }
@@ -766,22 +767,3 @@ div {
     border-radius: 5px;
     background: rgba(54, 54, 54, 0.6);
 }
-
-/*
-.apps tr {
-    height: 100px;
-    padding-bottom: 20px;
-}
-
-.app {
-    width: 100px;
-    background-color: rgba(255, 255, 255, 0.6);
-}
-
-
-.spacer {
-    width: 20px;
-    height: 20px !important;
-    background-color: rgba(0, 0, 0, 0);
-}
-*/
