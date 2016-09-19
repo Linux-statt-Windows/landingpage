@@ -3,6 +3,9 @@ $(document).ready(function(){
         document.location = "mobile.html";
     }
 
+    a = document.getElementById('application_menu');
+    ap = a.parentNode;
+
     startTime();
 }).keyup(function(e) {
      if (e.keyCode == 27) {
@@ -42,10 +45,12 @@ function launcher(name) {
             f.classList.add('fade-out');
             p.classList.remove('fade-out');
             p.classList.add('fade-in');
+            setTimeout(1000, ap.removeChild(a));
         }
     } else {
         e.classList.add('selected');
         if (name == 'applications') {
+            ap.appendChild(a);
             var f = document.getElementById('application_menu');
             var p = document.getElementById('pressMe');
             f.style.display = 'inline-block';
