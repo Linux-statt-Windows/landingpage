@@ -33,6 +33,6 @@ function startTime() {
 function launcher(name) {
     if (name == 'applications') {
         $('#application_menu').fadeToggle();
-        $('#press_me').fadeToggle();
+        $('#desktop_panel').fadeToggle();
     }
 }
