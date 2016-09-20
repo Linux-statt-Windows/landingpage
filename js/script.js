@@ -27,33 +27,12 @@ function startTime() {
 
     var e = document.getElementsByClassName('timedate')[0];
     e.innerHTML = d + ' ' + h + ':' + m;
-    var t = setTimeout(startTime, 500);
+    setTimeout(startTime, 500);
 }
 
 function launcher(name) {
-    var e = document.getElementsByClassName(name)[0];
-
-    if (e.classList.contains('selected')) {
-        e.classList.remove('selected');
-        if (name == 'applications') {
-            var f = document.getElementById('application_menu');
-            var p = document.getElementById('pressMe');
-            f.classList.remove('fade-in');
-            f.classList.add('fade-out');
-            p.classList.remove('fade-out');
-            p.classList.add('fade-in');
-        }
-    } else {
-        e.classList.add('selected');
-        if (name == 'applications') {
-            var f = document.getElementById('application_menu');
-            var p = document.getElementById('pressMe');
-            f.style.display = 'inline-block';
-            f.classList.remove('fade-out');
-            f.classList.add('fade-in');
-            p.classList.remove('fade-in');
-            p.classList.add('fade-out');
-        }
+    if (name == 'applications') {
+        $('#application_menu').fadeToggle();
+        $('#press_me').fadeToggle();
     }
 }
-
