@@ -527,12 +527,28 @@ body {
     left: 0;
 }
 
-#search {
-    background-color: #333;
-    padding: 5px 5px 5px 5px;
-    color: #fff;
-    font-size: 15px;
-    border: none;
+#sidebar {
+    position: fixed;
+    top: 180px;
+    width: 100px;
+    height: 430px;
+    background-color: #2e3436;
+    border-right: 2px solid #4f5253;
+    border-top: 2px solid #4f5253;
+    border-bottom: 2px solid #4f5253;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#sidebar .app_icon {
+    border: 1px solid white;
+    height: 80px;
+    width: 80px;
+    margin-top: 20px;
+    margin-left: 8px;
+    color: white;
+    text-align: center;
+    line-height: 80px;
 }
 
 .apps {
@@ -666,7 +682,6 @@ body {
 }
 
 #welcome_message {
-    font-size: 30px;
     color: white;
     margin-top: 130px;
     margin-left: 30%;
@@ -682,4 +697,8 @@ body {
 
 .clear {
     clear: both;
+}
+
+.draggable {
+    cursor: move;
 }

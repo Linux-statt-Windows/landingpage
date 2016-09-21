@@ -3,6 +3,8 @@ $(document).ready(function(){
         document.location = "mobile.html";
     }
 
+    $('#desktop_panel .draggable').draggable();
+    $('#sidebar').sortable();
     startTime();
 }).keyup(function(e) {
      if (e.keyCode == 27) {

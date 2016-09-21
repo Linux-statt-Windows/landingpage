@@ -9,10 +9,15 @@
     <link rel="stylesheet" href="./css/style.css"/>
 
     <script src="./js/jquery-3.1.0.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
     <script src="./js/script.js"></script>
     <script src="./js/loadPage.js"></script>
 </head>
 <body>
+    <noscript id="nojs">
+        <h2>Kein JavaScript?</h2>
+        Bitte aktiviere JavaScript, um diese Seite korrekt darzustellen.
+    </noscript>
     <div id="topbar">
         <div class="applications clickable" onclick="launcher('applications')"><span>Aktivitäten</span></div>
         <div class="timedate"><span>Mon 00:00</span></div>
@@ -82,18 +87,24 @@
         </ul>
         <hr/>
         <ul class="vert_menu">
-            <li class="dropdown_parent wireless"><span class="icontext">Wi-Fi</span><span
-                    class="detail">Nicht verbunden</span></li>
-            <ul class="dropdown_child">
-                <li><span>Netzwerk wählen</span></li>
-                <li><span>Ausschalten</span></li>
-                <li><span>Wi-Fi Einstellungen</span></li>
-            </ul>
-            <li class="dropdown_parent battery"><span class="icontext">power</span><span
-                    class="detail">Voll geladen</span></li>
-            <ul class="dropdown_child">
-                <li><span>Energieeinstellungen</span></li>
-            </ul>
+            <li class="dropdown_parent wireless">
+                <span class="icontext">Wi-Fi</span>
+                <span class="detail">Nicht verbunden</span>
+                <ul class="dropdown_child">
+                    <li><span>Netzwerk wählen</span></li>
+                    <li><span>Ausschalten</span></li>
+                    <li><span>Wi-Fi Einstellungen</span></li>
+                </ul>
+            </li>
+            <li>
+            </li>
+            <li class="dropdown_parent battery">
+                <span class="icontext">power</span>
+                <span class="detail">Voll geladen</span>
+                <ul class="dropdown_child">
+                    <li><span>Energieeinstellungen</span></li>
+                </ul>
+            </li>
         </ul>
         <hr/>
         <ul class="circles_menu">
@@ -105,15 +116,22 @@
     <div id="desktop_panel">
         <div id="press_me"><i class="ion ion-arrow-up-a"></i> Drück mich! :)</div>
         <div class="clear"></div>
-        <div id="welcome_message">
-            LsW - Linux statt Windows
+        <div id="welcome_message" class="draggable">
+            <h1>
+                Willkommen bei LsW - Linux statt Windows
+            </h1>
+            <h3>
+                Um mehr über unsere Community zu erfahren klicke auf Aktivitäten
+            </h3>
         </div>
-        <noscript id="nojs">
-            <h2>Kein JavaScript?</h2>
-            Bitte aktiviere JavaScript, um diese Seite korrekt darzustellen.
-        </noscript>
     </div>
     <div id="application_menu">
+        <div id="sidebar">
+            <div class="app_icon">1</div>
+            <div class="app_icon">2</div>
+            <div class="app_icon">3</div>
+            <div class="app_icon">4</div>
+        </div>
         <center>
             <div class="apps">
                 <div class="app">
