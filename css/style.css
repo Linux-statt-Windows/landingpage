@@ -573,7 +573,6 @@ body {
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
     -o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
     border-radius: 5px;
-    padding: 5px;
     color: white;
 }
 
@@ -581,22 +580,9 @@ body {
     border: solid 1px white;
 }
 
-.app #blog {
-    background: url("../assets/image/blog_pic.png") no-repeat;
-    -webkit-background-size: 100%;
-    background-size: 100%;
-}
-
-.app #forum {
-    background: url("../assets/image/forum_pic.png") no-repeat;
-    -webkit-background-size: 100%;
-    background-size: 100%;
-}
-
-.app #teampage {
-    background: url("../assets/image/team_pic.png") no-repeat;
-    -webkit-background-size: 100%;
-    background-size: 100%;
+.app img {
+    width: 100%;
+    max-height: 200px;
 }
 
 .app #socialNetworking {

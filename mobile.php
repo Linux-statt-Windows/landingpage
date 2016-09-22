@@ -1,25 +1,23 @@
+<?php
+require_once 'src/functions.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
 
     <title>LsW Landingpage</title>
 
-    <!-- Bootstrap core CSS -->
     <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
     <link href="./css/style_mobile.css" rel="stylesheet">
-
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/image/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-    <script src="./js/script_mobile.js"></script>
-    <script src="./js/loadPage.js"></script>
 
+    <script src="./js/script_mobile.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -29,52 +27,53 @@
 </head>
 
 <body onload="load()">
-
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand" href="./index.html">Linux statt Windows</a>
+            <a class="navbar-brand" href="./index.php">Linux statt Windows</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
-        </div><!--/.nav-collapse -->
+        </div>
     </div>
 </nav>
-
 <div class="container">
     <div class="starter-template">
-        <!-- content here ! -->
         <div class="row">
-            <!-- blog posts row -->
             <div class="col-sm-3">
                 <div class="section-title">Webseiten
                     <small style="margin-left: 4px;">⟩</small>
                 </div>
             </div>
             <div class="col-sm-3">
-                <div class="card" onclick="loadPage('forum')">
-                    <img src="./assets/image/forum_pic.png"
-                         style='height: 100%; width: 100%; object-fit: contain; border-top-left-radius: 8px; border-top-right-radius: 8px;'>
-                    <h2><a class="card-title">Forum</a></h2>
+                <div class="card">
+                    <a target="_blank" href="<?=getAppURL('forum')?>">
+                        <img src="./assets/image/forum_pic.png"
+                             style='height: 100%; width: 100%; object-fit: contain; border-top-left-radius: 8px; border-top-right-radius: 8px;'>
+                    </a>
+                    <h2><a target="_blank" href="<?=getAppURL('forum')?>" class="card-title">Forum</a></h2>
                     <div style="height: 1px;"></div>
                 </div>
             </div>
             <div class="col-sm-3">
-                <div class="card" onclick="loadPage('blog')">
-                    <img src="./assets/image/blog_pic.png"
-                         style='height: 100%; width: 100%; object-fit: contain; border-top-left-radius: 8px; border-top-right-radius: 8px;'>
-                    <h2><a class="card-title">Blog</a></h2>
+                <div class="card">
+                    <a target="_blank" href="<?=getAppURL('blog')?>">
+                        <img src="./assets/image/blog_pic.png"
+                             style='height: 100%; width: 100%; object-fit: contain; border-top-left-radius: 8px; border-top-right-radius: 8px;'>
+                    </a>
+                    <h2><a target="_blank" href="<?=getAppURL('blog')?>" class="card-title">Blog</a></h2>
                     <div style="height: 1px;"></div>
                 </div>
             </div>
             <div class="col-sm-3">
-                <div class="card" onclick="loadPage('team')">
-                    <img src="./assets/image/team_pic.png"
-                         style='height: 100%; width: 100%; object-fit: contain; border-top-left-radius: 8px; border-top-right-radius: 8px;'>
-                    <h2><a class="card-title">Team</a></h2>
+                <div class="card">
+                    <a target="_blank" href="<?=getAppURL('team')?>">
+                        <img src="./assets/image/team_pic.png"
+                             style='height: 100%; width: 100%; object-fit: contain; border-top-left-radius: 8px; border-top-right-radius: 8px;'>
+                    </a>
+                    <h2><a target="_blank" href="<?=getAppURL('team')?>" class="card-title">Team</a></h2>
                     <div style="height: 1px;"></div>
                 </div>
             </div>
-
             <div class="col-sm-3">
                 <div style="height: 5px;"></div>
                 <div class="section-title">Soziale Netzwerke
@@ -82,26 +81,25 @@
                 </div>
             </div>
             <div class="col-sm-3">
-                <div class="card" style="background-color: #3b5998;" onclick="loadPage('facebook')">
-                    <h2><a class="card-title"
+                <div class="card" style="background-color: #3b5998;">
+                    <h2><a target="_blank" href="<?=getAppURL('facebook')?>" class="card-title"
                            style="color: #fff">Facebook</a></h2>
                     <div style="height: 1px;"></div>
                 </div>
             </div>
             <div class="col-sm-3">
-                <div class="card" style="background-color: #4099FF" onclick="loadPage('twitter')">
-                    <h2><a class="card-title" style="color: #fff">Twitter</a>
+                <div class="card" style="background-color: #4099FF">
+                    <h2><a target="_blank" href="<?=getAppURL('twitter')?>" class="card-title" style="color: #fff">Twitter</a>
                     </h2>
                     <div style="height: 1px;"></div>
                 </div>
             </div>
             <div class="col-sm-3">
-                <div class="card" style="background-color: #e52d27" onclick="loadPage('youtube')">
-                    <h2><a class="card-title" style="color: #fff">Youtube</a></h2>
+                <div class="card" style="background-color: #e52d27">
+                    <h2><a target="_blank" href="<?=getAppURL('youtube')?>" class="card-title" style="color: #fff">Youtube</a></h2>
                     <div style="height: 1px;"></div>
                 </div>
             </div>
-
             <div class="col-sm-3">
                 <div style="height: 5px;"></div>
                 <div class="section-title">Telegram Gruppen
@@ -109,32 +107,27 @@
                 </div>
             </div>
             <div class="col-sm-3">
-                <div class="card" style="background-color: #179cde" onclick="loadPage('tgPur')">
-                    <h2><a class="card-title" style="color: #fff">Telegram Pur</a></h2>
+                <div class="card" style="background-color: #179cde">
+                    <h2><a target="_blank" href="<?=getAppURL('tgPur')?>" class="card-title" style="color: #fff">Telegram Pur</a></h2>
                     <div style="height: 1px;"></div>
                 </div>
             </div>
             <div class="col-sm-3">
-                <div class="card" style="background-color: #179cde" onclick="loadPage('tgSmalltalk')">
-                    <h2><a class="card-title" style="color: #fff">Telegram Smalltalk</a></h2>
+                <div class="card" style="background-color: #179cde">
+                    <h2><a target="_blank" href="<?=getAppURL('tgSmalltalk')?>" class="card-title" style="color: #fff">Telegram Smalltalk</a></h2>
                     <div style="height: 1px;"></div>
                 </div>
             </div>
             <div class="col-sm-3">
-                <div class="card" style="background-color: #179cde" onclick="loadPage('tgGaming')">
-                    <h2><a class="card-title" style="color: #fff">Telegram Gaming</a></h2>
+                <div class="card" style="background-color: #179cde">
+                    <h2><a target="_blank" href="<?=getAppURL('tgGaming')?>" class="card-title" style="color: #fff">Telegram Gaming</a></h2>
                     <div style="height: 1px;"></div>
                 </div>
             </div>
         </div>
-
-    </div><!-- /.container -->
-
-
+    </div>
 </div>
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="./bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

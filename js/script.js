@@ -1,6 +1,6 @@
 $(document).ready(function(){
     if (screen.width <= 699) {
-        document.location = "mobile.html";
+        document.location = "mobile.php";
     }
 
     $('#desktop_panel .draggable').draggable();

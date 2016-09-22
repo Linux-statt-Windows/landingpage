@@ -1,3 +1,6 @@
+<?php
+require_once 'src/functions.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,14 +8,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>LsW - Linux statt Windows</title>
-    <link rel="stylesheet" href="assets/font/ionicons.min.css">
+    <link rel="stylesheet" href="./assets/font/ionicons.min.css">
     <link rel="stylesheet" href="./css/style.css"/>
-    <link rel="shortcut icon" type="image/x-icon" href="assets/image/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/image/favicon.ico">
 
     <script src="./js/jquery-3.1.0.min.js"></script>
     <script src="./js/jquery-ui.min.js"></script>
     <script src="./js/script.js"></script>
-    <script src="./js/loadPage.js"></script>
 </head>
 <body>
     <noscript id="nojs">
@@ -136,31 +138,48 @@
         <center>
             <div class="apps">
                 <div class="app">
-                    <div class="content clickable" id="blog" onclick="loadPage('blog')"></div>
+                    <div class="content clickable">
+                        <a target="_blank" href="<?=getAppURL('blog')?>">
+                            <img src="./assets/image/blog_pic.png" />
+                        </a>
+                    </div>
                     <div class="description">Blog</div>
                 </div>
                 <div class="app">
-                    <div class="content clickable" id="forum" onclick="loadPage('forum')"></div>
+                    <div class="content clickable">
+                        <a target="_blank" href="<?=getAppURL('forum')?>">
+                            <img src="./assets/image/forum_pic.png" />
+                        </a>
+                    </div>
                     <div class="description">Forum</div>
                 </div>
                 <div class="app">
                     <div class="content" id="socialNetworking">
-                        <a class="button" id="facebook" onclick="loadPage('facebook')">Facebook</a>
-                        <a class="button" id="twitter" onclick="loadPage('twitter')">Twitter</a>
-                        <a class="button" id="youtube" onclick="loadPage('youtube')">Youtube</a>
+                        <a class="button" id="facebook" target="_blank" href="<?=getAppURL('facebook')?>">Facebook</a>
+                        <a class="button" id="twitter" target="_blank" href="<?=getAppURL('twitter')?>">Twitter</a>
+                        <a class="button" id="youtube" target="_blank" href="<?=getAppURL('youtube')?>">Youtube</a>
                     </div>
                     <div class="description">Social Media</div>
                 </div>
                 <div class="app">
                     <div class="content" id="telegram">
-                        <a class="button" id="telegramSmalltalk" onclick="loadPage('tgSmalltalk')">Smalltalk</a>
-                        <a class="button" id="telegramPur" onclick="loadPage('tgPur')">Pur</a>
-                        <a class="button" id="telegramGaming" onclick="loadPage('tgGaming')">Gaming</a>
+                        <a class="button"
+                           id="telegramSmalltalk"
+                           target="_blank"
+                           href="<?=getAppURL('tgSmalltalk')?>">Smalltalk</a>
+                        <a class="button"
+                           id="telegramPur"
+                           target="_blank" href="<?=getAppURL('tgPur')?>">Pur</a>
+                        <a class="button" id="telegramGaming" target="_blank" href="<?=getAppURL('tgGaming')?>">Gaming</a>
                     </div>
                     <div class="description">Telegram Links</div>
                 </div>
                 <div class="app">
-                    <div class="content clickable" id="teampage" onclick="loadPage('team')"></div>
+                    <div class="content clickable">
+                        <a target="_blank" href="<?=getAppURL('team')?>">
+                            <img src="./assets/image/team_pic.png" />
+                        </a>
+                    </div>
                     <div class="description">Übersicht unseres Teams</div>
                 </div>
                 <div class="app">

@@ -54,9 +54,9 @@ body {
 .card-title {
     color: rgba(0, 0, 0, 0.87);
     font-size: 15px;
-    margin-top: 0;
+    width: 100%;
+    display: inline-block;
     margin-left: 16px;
-    margin-bottom: 22px;
 }
 
 .card-title:hover, .card-title:active, .card-title:focus {
